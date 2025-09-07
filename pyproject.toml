@@ -26,7 +26,7 @@ classifiers = [
 ]
 
 [project.scripts]
-oxygen = "cron_viewer.scripts:main"
+cronv = "cron_viewer.scripts:main"
 
 [project.urls]
 Homepage = "https://github.com/EsauM10/cron_viewer"
