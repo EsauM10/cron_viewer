@@ -2,13 +2,15 @@ import argparse
 import locale
 
 from dotenv import load_dotenv
-
 from cron_viewer.cron import CronViewer
+
+try:
+    locale.setlocale(locale.LC_ALL, "pt_BR.UTF-8")
+except Exception as ex:
+    print('[cronv]:', ex)
 
 def deploy(output_path: str, env_file: str):
     load_dotenv(env_file)
-    locale.setlocale(locale.LC_ALL, "pt_BR.UTF-8")
-
     CronViewer(output_path).run()
 
 
