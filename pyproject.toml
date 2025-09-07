@@ -1,0 +1,35 @@
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cron_viewer"
+version = "0.1.0"
+authors = [
+  {name="Esaú Mascarenhas"},
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "python-dotenv",
+  "croniter==6.0.0",
+  "cron_descriptor==2.0.5"
+]
+keywords = ["cron", "deploy", "docs", "job"]
+license = {text = "MIT License"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+oxygen = "cron_viewer.scripts:main"
+
+[project.urls]
+Homepage = "https://github.com/EsauM10/cron_viewer"
+
+[tool.setuptools.packages.find]
+include = ["cron_viewer*"]
