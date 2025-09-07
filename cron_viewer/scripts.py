@@ -1,5 +1,6 @@
 import argparse
 import locale
+import os
 
 from dotenv import load_dotenv
 from cron_viewer.cron import CronViewer
@@ -10,6 +11,7 @@ except Exception as ex:
     print('[cronv]:', ex)
 
 def deploy(output_path: str, env_file: str):
+    os.mkdir(output_path)
     load_dotenv(env_file)
     CronViewer(output_path).run()
 
