@@ -1,0 +1,10 @@
+__pycache__/
+.vscode/
+build/
+dist/
+public/
+venv/
+cron_viewer.egg-info/
+
+main.py
+.env

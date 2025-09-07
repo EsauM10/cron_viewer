@@ -1,0 +1,1 @@
+recursive-include cron_viewer/templates *

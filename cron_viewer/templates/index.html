@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cron Jobs Manager</title>
+        <meta name="description" content="Visualização e gerenciamento de expressões de agendamento Cron">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <!-- Header -->
+            <header class="header">
+                <h1 class="title">Cron Viewer</h1>
+                <p id="subtitle"></p>
+            </header>
+
+            <!-- Search -->
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Buscar jobs pelo nome..." 
+                        class="search-input"
+                    >
+                </div>
+            </div>
+
+            <!-- Grid Container -->
+            <div id="jobsGrid" class="jobs-grid">
+                <!-- Jobs will be rendered here by JavaScript -->
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results hidden">
+                <p>Nenhum job encontrado para "<span id="searchTerm"></span>"</p>
+            </div>
+        </div>
+
+        
+        <script type="module" src="cron.js"></script>
+    </body>
+</html>
