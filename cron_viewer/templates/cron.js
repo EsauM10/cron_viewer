@@ -53,14 +53,14 @@ function createJobCard(job) {
                     <div class="execution-item">
                         ${calendarIcon}
                         <div class="execution-details">
-                            <span class="execution-label">Próxima execução</span>
+                            <span class="execution-label">Next execution at</span>
                             <span class="execution-time">${job.nextRun.toLocaleString('pt-BR')}</span>
                         </div>
                     </div>
                 </div>
                 
                 <button class="details-button" onclick="handleDetailsClick('${job.name}')">
-                    Detalhes
+                    Details
                 </button>
             </div>
         </div>
@@ -74,7 +74,7 @@ function filterJobs(searchTerm) {
 }
 
 function renderJobs(jobs, searchTerm = '') {
-    subtitle.innerText = `${jobs.length} crons encontrados`
+    subtitle.innerText = `${jobs.length} crons found`
 
     for (const job of jobs) {
         const now = new Date();

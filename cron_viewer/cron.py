@@ -38,7 +38,7 @@ class CronViewer:
             'cron': cron,
             'description': descriptor.get_description(),
             'nextRun': itr.get_next(datetime).strftime('%d/%m/%Y %H:%M:%S'),
-            'status': 'Ativo'
+            'status': 'Active'
         }
 
     def get_jobs(self) -> list[dict[str, str]]:
