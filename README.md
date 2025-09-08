@@ -1,6 +1,8 @@
 # Cron Viewer
 Generate a visual documentation of your cron jobs and easily publish it on **GitHub Pages**.
 
+![page](https://github.com/user-attachments/assets/dce6ec30-325b-49b1-b971-98367ec43845)
+
 ## 📦 Installation
 ```
 pip install git+https://github.com/EsauM10/cron_viewer.git
@@ -18,7 +20,8 @@ crons/
  ├── cron.js
  └── styles.css
 ```
-
+> [!IMPORTANT]  
+> Cron Environment variables in the .env file must currently use the `_CRON_TIME` prefix, but support for custom variable names will be added soon.
 
 ## ⚙️ CLI Options
 * `--output=<folder>`
